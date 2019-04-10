@@ -38,6 +38,7 @@ Status DestroyList_Sq(SqList &L)
 Status ClearList_Sq(SqList &L)
 {
 	L.length = 0;
+	return OK;
 }
 
 Status ListInsert_Sq(SqList &L, int i, ElemType e)

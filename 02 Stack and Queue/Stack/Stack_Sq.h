@@ -3,8 +3,8 @@
 
 
 #define SElemType int 			// 数据类型
-#define STACK_INIT_SIZE 1 		// 存储空间的初始大小
-#define STACK_INCREAMENT 1 		// 存储空间增量
+#define STACK_INIT_SIZE 100 		// 存储空间的初始大小
+#define STACK_INCREAMENT 20 		// 存储空间增量
 
 #define Status int 				// 返回状态
 #define OVERFLOW 0 				// 溢出错误代码
@@ -27,16 +27,16 @@ Status DestroyStack_Sq(SqStack *s);
 
 Status ClearStack_Sq(SqStack *s);
 
-Status IsStackEmpty_Sq(const SqStack *s);
+bool IsStackEmpty_Sq(const SqStack *s);
 
 int StackLength_Sq(const SqStack *s);
 
-Status GetTop_Sq(const SqStack *s);
+Status GetTop_Sq(const SqStack *s, SElemType &e);
 
-Status Push_Sq(SqStack *s, SElemType *e);
+Status Push_Sq(SqStack *s, SElemType e);
 
-Status Pop_Sq(SqStack *s, SElemType *e);
+Status Pop_Sq(SqStack *s, SElemType &e);
 
-Status StackTraverse_Sq(SqStack *s, Status (* visit)());
+Status StackTraverse_Sq(SqStack *s, void (* visit)(SElemType));
 
 #endif
