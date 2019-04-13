@@ -17,6 +17,11 @@ void checkSymbol(string str)
         }
         else
         {
+            if(s.empty())
+            {
+                cout<<"Error input."<<endl;
+                return;
+            }
             switch (ch)
             {
                 case '>':
@@ -65,6 +70,12 @@ void checkSymbol(string str)
             }
         }
     }
+    if(!s.empty())
+    {
+        cout<<"Error input."<<endl;
+        return;
+    }
+    cout<<"Correct input."<<endl;
 }
 
 int main()
